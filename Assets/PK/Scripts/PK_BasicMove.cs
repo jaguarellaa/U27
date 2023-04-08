@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 
-namespace PK
+namespace PK.GameJam
 {
     public class PK_BasicMove : MonoBehaviour
     {
