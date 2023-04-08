@@ -17,6 +17,9 @@ public class SocialEnemyController : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float accSpeed;
 
+    [SerializeField] GameObject particleRed;
+    [SerializeField] GameObject particleBlue;
+
 
 
     void Start()
@@ -34,11 +37,12 @@ public class SocialEnemyController : MonoBehaviour
     void FixedUpdate()
     {
         MoveTowardsPlayer();
+        LookAtPlayer();
     }
 
     void MoveTowardsPlayer()
     {
-        Vector3 direction = (playerTransform.position - transform.position).normalized;
+        Vector3 direction = (new Vector3(playerTransform.position.x, 0, playerTransform.position.z) - transform.position).normalized;
 
         if (rb.velocity.magnitude < speed)
         {
@@ -47,18 +51,11 @@ public class SocialEnemyController : MonoBehaviour
 
     }
 
-    void MoveTowardsPlayerWithTransform()
+    void LookAtPlayer()
     {
-        float distance = Vector3.Distance(transform.position, playerTransform.position);
-
-        if (distance > 0.1f)
-        {
-            Vector3 direction = (playerTransform.position - transform.position).normalized;
-
-            transform.Translate(direction * speed * Time.deltaTime);
-
-        }
+        transform.LookAt(playerTransform);
     }
+
 
 
 
@@ -68,6 +65,8 @@ public class SocialEnemyController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
+
+            Instantiate(particleRed, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
             collision.gameObject.GetComponent<PlayerControllerForSocialEnemies>().GetDamage(Random.Range(minTimeCost, maxTimeCost));
             Destroy(this.gameObject);
         }
@@ -76,6 +75,8 @@ public class SocialEnemyController : MonoBehaviour
     IEnumerator WillBeDestroyedAfterCountdown(float time)
     {
         yield return new WaitForSeconds(time);
+
+        Instantiate(particleBlue, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
         Destroy(this.gameObject);
     }
 }
