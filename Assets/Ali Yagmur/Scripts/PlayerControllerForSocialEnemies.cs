@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerControllerForSocialEnemies : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody rb;
     [SerializeField] GameObject characterModel;
+
+
+
 
     private void Update()
     {
