@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.PlasticSCM.Editor.WebApi;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace PK.GameJam
@@ -27,19 +28,22 @@ namespace PK.GameJam
             Vector3 moveDrection =new Vector3 (0,0,z);
             _characterController.Move(transform.TransformDirection(moveDrection)*_speed*Time.deltaTime);
             transform.Rotate(0, x*rotateSpeed*Time.deltaTime, 0);
+            RaycastHit hit;
+            if(!Physics.Raycast(transform.position,transform.forward,out hit, 1))
+            {
+                    _speed = speed;
+            }
 
         }
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
+            if (!hit.collider.CompareTag(TagContainer.PushObjectTag)) return;
             if (hit.rigidbody == null) return;
             if (hit.moveDirection.y < -.3f) return;
             float push = speed / hit.collider.attachedRigidbody.mass;
             hit.collider.attachedRigidbody.velocity = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z) * push * Time.deltaTime;
             _speed = push;
         }
-        private void OnCollisionExit(Collision collision)
-        {
-            _speed = speed;
-        }
+        
     }
 }

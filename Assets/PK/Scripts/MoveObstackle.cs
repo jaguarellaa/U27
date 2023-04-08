@@ -9,10 +9,12 @@ namespace PK.GameJam
     {
         [SerializeField] private int obstackleIndex = 0;
         [SerializeField] private float animTime;
+        [SerializeField] private int triggerRequirements;
         [SerializeField] private Ease ease = Ease.Linear;
 
         private float startPositionY;
         private Transform animObject;
+        private int totalTriggers;
 
         private void Awake()
         {
@@ -21,12 +23,17 @@ namespace PK.GameJam
         }
         private void OpenAnim(int index)
         {
+
             if (index == obstackleIndex)
-            animObject.DOLocalMoveY(0, animTime).SetEase(ease);
+            {
+                totalTriggers++;
+                if (totalTriggers == triggerRequirements)
+                    animObject.DOLocalMoveY(0, animTime).SetEase(ease);
+            }
         }
         private void CloseAnim(int index)
         {
-            if(index == obstackleIndex)
+            if (index == obstackleIndex)
             {
                 animObject.DOLocalMoveY(startPositionY, animTime).SetEase(ease);
             }
