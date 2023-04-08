@@ -65,4 +65,9 @@ public class PlayerControllerForSocialEnemies : MonoBehaviour
     {
         Debug.Log("You have lost " + timeLost + " seconds!");
     }
+
+    public void GetAcademyPoints(int points)
+    {
+        Debug.Log("You have gained " + points + " points!");
+    }
 }

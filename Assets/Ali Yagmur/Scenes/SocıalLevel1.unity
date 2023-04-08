@@ -1202,6 +1202,7 @@ MonoBehaviour:
   SocialEnemyV1Prefab: {fileID: 7881546284932752459, guid: 6164cfe24f57f4f42b6b7fc1c240be2c, type: 3}
   SocialEnemyV2Prefab: {fileID: 2860502174546722881, guid: 3bc8b3dbd82fbe9458d8b1ba005dfd12, type: 3}
   SocialEnemyV3Prefab: {fileID: 2831876237349574785, guid: c8e104fe4cd25af438d2757818d6bbc2, type: 3}
+  StudyPrefab: {fileID: 2831876237349574785, guid: 6df58e779762e1c4b84253c302dea2be, type: 3}
 --- !u!4 &1640033705
 Transform:
   m_ObjectHideFlags: 0
@@ -1346,8 +1347,8 @@ Camera:
   m_GameObject: {fileID: 1668139512}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

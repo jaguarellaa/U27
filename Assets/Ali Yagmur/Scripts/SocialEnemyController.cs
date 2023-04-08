@@ -8,6 +8,8 @@ public class SocialEnemyController : MonoBehaviour
     Transform playerTransform;
     Rigidbody rb;
 
+    [SerializeField] bool isPositive;
+
     [SerializeField] int minTimeCost;
     [SerializeField] int maxTimeCost;
 
@@ -65,10 +67,18 @@ public class SocialEnemyController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-
-            Instantiate(particleRed, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
-            collision.gameObject.GetComponent<PlayerControllerForSocialEnemies>().GetDamage(Random.Range(minTimeCost, maxTimeCost));
+            if (isPositive)
+            {
+                Instantiate(particleRed, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+                collision.gameObject.GetComponent<PlayerControllerForSocialEnemies>().GetAcademyPoints(Random.Range(minTimeCost, maxTimeCost));
+            }
+            else
+            {
+                Instantiate(particleRed, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+                collision.gameObject.GetComponent<PlayerControllerForSocialEnemies>().GetDamage(Random.Range(minTimeCost, maxTimeCost));
+            }
             Destroy(this.gameObject);
+
         }
     }
 
