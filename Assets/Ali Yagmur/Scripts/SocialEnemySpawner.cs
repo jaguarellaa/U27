@@ -19,9 +19,9 @@ public class SocialEnemySpawner : MonoBehaviour
     [Tooltip("Hardness level between 1 and 3.")]
     private int HardnessLevel = 1;
 
-    //75 20 5
-    //50 40 10
-    //30 40 30
+    // 40 20 10 - 30
+    // 40 25 15 - 20
+    // 25 35 20 - 20
 
     private float spawnTimer;
     [SerializeField] float minSpawnTime;
@@ -32,6 +32,7 @@ public class SocialEnemySpawner : MonoBehaviour
     [SerializeField] GameObject SocialEnemyV1Prefab;
     [SerializeField] GameObject SocialEnemyV2Prefab;
     [SerializeField] GameObject SocialEnemyV3Prefab;
+    [SerializeField] GameObject StudyPrefab;
 
     void Start()
     {
@@ -74,47 +75,59 @@ public class SocialEnemySpawner : MonoBehaviour
 
             if (HardnessLevel == 1)
             {
-                if (randomInt <=75)
+                if (randomInt <=40)
                 {
                     EnemyToBeSpawned = SocialEnemyV1Prefab;
                 }
-                else if (randomInt <= 95)
+                else if (randomInt <= 60)
                 {
                     EnemyToBeSpawned = SocialEnemyV2Prefab;
                 }
-                else
+                else if (randomInt <= 70)
                 {
                     EnemyToBeSpawned = SocialEnemyV3Prefab;
+                }
+                else
+                {
+                    EnemyToBeSpawned = StudyPrefab;
                 }
             }
             else if (HardnessLevel == 2)
             {
-                if (randomInt <= 50)
+                if (randomInt <= 40)
                 {
                     EnemyToBeSpawned = SocialEnemyV1Prefab;
                 }
-                else if (randomInt <= 90)
+                else if (randomInt <= 65)
                 {
                     EnemyToBeSpawned = SocialEnemyV2Prefab;
                 }
-                else
+                else if (randomInt <= 80)
                 {
                     EnemyToBeSpawned = SocialEnemyV3Prefab;
+                }
+                else
+                {
+                    EnemyToBeSpawned = StudyPrefab;
                 }
             }
             else
             {
-                if (randomInt <= 30)
+                if (randomInt <= 25)
                 {
                     EnemyToBeSpawned = SocialEnemyV1Prefab;
                 }
-                else if (randomInt <= 70)
+                else if (randomInt <= 60)
                 {
                     EnemyToBeSpawned = SocialEnemyV2Prefab;
                 }
-                else
+                else if (randomInt <= 80)
                 {
                     EnemyToBeSpawned = SocialEnemyV3Prefab;
+                }
+                else
+                {
+                    EnemyToBeSpawned = StudyPrefab;
                 }
             }
             GameObject newEnemy = Instantiate(EnemyToBeSpawned, spawnLocation, Quaternion.identity);
