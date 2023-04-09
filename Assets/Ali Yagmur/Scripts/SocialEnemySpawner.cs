@@ -117,11 +117,11 @@ public class SocialEnemySpawner : MonoBehaviour
                 {
                     EnemyToBeSpawned = SocialEnemyV1Prefab;
                 }
-                else if (randomInt <= 60)
+                else if (randomInt <= 50)
                 {
                     EnemyToBeSpawned = SocialEnemyV2Prefab;
                 }
-                else if (randomInt <= 80)
+                else if (randomInt <= 70)
                 {
                     EnemyToBeSpawned = SocialEnemyV3Prefab;
                 }
