@@ -386,6 +386,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2d ring target 17 Green (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9007054763684365317, guid: 848665ddeda79dc45ae48cfa8cb65b37, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 848665ddeda79dc45ae48cfa8cb65b37, type: 3}
 --- !u!1 &141959790
@@ -539,6 +543,10 @@ PrefabInstance:
     - target: {fileID: 1043719424302878626, guid: 57da7a2ae0a58b34eac48185e34a44ca, type: 3}
       propertyPath: m_Name
       value: 2d ring target 14 Red (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043719424302878626, guid: 57da7a2ae0a58b34eac48185e34a44ca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8885473949653703463, guid: 57da7a2ae0a58b34eac48185e34a44ca, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -721,6 +729,11 @@ Transform:
   m_Father: {fileID: 1843302580}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 180}
+--- !u!1 &431638544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1043719424302878626, guid: 57da7a2ae0a58b34eac48185e34a44ca, type: 3}
+  m_PrefabInstance: {fileID: 1697180697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &462620472
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +767,11 @@ Transform:
   m_Father: {fileID: 1728923831}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &471572106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1043719424302878626, guid: 57da7a2ae0a58b34eac48185e34a44ca, type: 3}
+  m_PrefabInstance: {fileID: 1043405435502748914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,8 +933,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2d ring target 17 Green (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9007054763684365317, guid: 848665ddeda79dc45ae48cfa8cb65b37, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 848665ddeda79dc45ae48cfa8cb65b37, type: 3}
+--- !u!1 &802644719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9007054763684365317, guid: 848665ddeda79dc45ae48cfa8cb65b37, type: 3}
+  m_PrefabInstance: {fileID: 71363723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &821404082
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,6 +1023,11 @@ Camera:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4429432022911190, guid: d03c4353fda446d4f8df56d422578d64, type: 3}
   m_PrefabInstance: {fileID: 39768389}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &948332027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 93276267980066708, guid: 7b563647c3786d64b8a35930393c423d, type: 3}
+  m_PrefabInstance: {fileID: 1181405240}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
@@ -1343,6 +1375,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079118749}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1084189020 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 93276267980066708, guid: 7b563647c3786d64b8a35930393c423d, type: 3}
+  m_PrefabInstance: {fileID: 94168177772502161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1181405240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1353,6 +1390,10 @@ PrefabInstance:
     - target: {fileID: 93276267980066708, guid: 7b563647c3786d64b8a35930393c423d, type: 3}
       propertyPath: m_Name
       value: 2d ring target 17 Red (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 93276267980066708, guid: 7b563647c3786d64b8a35930393c423d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 98668794707464378, guid: 7b563647c3786d64b8a35930393c423d, type: 3}
       propertyPath: m_RootOrder
@@ -1576,6 +1617,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309726043}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1395456550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9007054763684365317, guid: 848665ddeda79dc45ae48cfa8cb65b37, type: 3}
+  m_PrefabInstance: {fileID: 747490466}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1400043592 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4534147065827568, guid: 5187dfa4d8f19524e8bbf7c6894b7de7, type: 3}
@@ -2361,6 +2407,11 @@ Transform:
   m_Father: {fileID: 1286289624}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1662172171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1043719424302878626, guid: 57da7a2ae0a58b34eac48185e34a44ca, type: 3}
+  m_PrefabInstance: {fileID: 218976131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1697180697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2415,6 +2466,10 @@ PrefabInstance:
     - target: {fileID: 1043719424302878626, guid: 57da7a2ae0a58b34eac48185e34a44ca, type: 3}
       propertyPath: m_Name
       value: 2d ring target 14 Red (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043719424302878626, guid: 57da7a2ae0a58b34eac48185e34a44ca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57da7a2ae0a58b34eac48185e34a44ca, type: 3}
@@ -2486,10 +2541,69 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1807341370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1807341372}
+  - component: {fileID: 1807341371}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1807341371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807341370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80be439bf0fd2fb44a2fa459326b7572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets:
+  - {fileID: 1084189020}
+  - {fileID: 471572106}
+  - {fileID: 2039377918}
+  - {fileID: 802644719}
+  - {fileID: 948332027}
+  - {fileID: 431638544}
+  - {fileID: 1662172171}
+  - {fileID: 1395456550}
+  timeIntervalForTargets: 5
+--- !u!4 &1807341372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807341370}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1843302580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1070232985009656329, guid: 78c4c4a56c849eb4a945e04e871c13ae, type: 3}
   m_PrefabInstance: {fileID: 1507885350}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2039377918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9007054763684365317, guid: 848665ddeda79dc45ae48cfa8cb65b37, type: 3}
+  m_PrefabInstance: {fileID: 9005948306026651844}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2114200658
 PrefabInstance:
@@ -2574,6 +2688,10 @@ PrefabInstance:
     - target: {fileID: 93276267980066708, guid: 7b563647c3786d64b8a35930393c423d, type: 3}
       propertyPath: m_Name
       value: 2d ring target 17 Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 93276267980066708, guid: 7b563647c3786d64b8a35930393c423d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 98668794707464378, guid: 7b563647c3786d64b8a35930393c423d, type: 3}
       propertyPath: m_RootOrder
@@ -2676,6 +2794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2d ring target 14 Red
       objectReference: {fileID: 0}
+    - target: {fileID: 1043719424302878626, guid: 57da7a2ae0a58b34eac48185e34a44ca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57da7a2ae0a58b34eac48185e34a44ca, type: 3}
 --- !u!1001 &9005948306026651844
@@ -2732,6 +2854,10 @@ PrefabInstance:
     - target: {fileID: 9007054763684365317, guid: 848665ddeda79dc45ae48cfa8cb65b37, type: 3}
       propertyPath: m_Name
       value: 2d ring target 17 Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007054763684365317, guid: 848665ddeda79dc45ae48cfa8cb65b37, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 848665ddeda79dc45ae48cfa8cb65b37, type: 3}
