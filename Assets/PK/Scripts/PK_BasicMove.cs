@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.PlasticSCM.Editor.WebApi;
@@ -37,7 +38,7 @@ namespace PK.GameJam
             }
             if (moveDrection != Vector3.zero)
             {
-                gameObject.transform.forward = moveDrection;
+                gameObject.transform.forward = Vector3.Lerp(gameObject.transform.forward, moveDrection,.5f*Time.deltaTime*rotateSpeed);
             }
             RaycastHit hit;
             if (!Physics.Raycast(transform.position, transform.forward, out hit, .9f))
