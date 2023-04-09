@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Ayse/Dart.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/PK/Scene/PKScene.unity
+    guid: aebb8ccbd98fd3b4eb80eec9fbd7a855
+  - enabled: 1
+    path: "Assets/Ali Yagmur/Scenes/Soc\u0131alLevel1.unity"
+    guid: 7955fc916ddc46441b121b47c463b239
   m_configObjects: {}
