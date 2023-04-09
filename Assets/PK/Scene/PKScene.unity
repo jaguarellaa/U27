@@ -690,7 +690,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12917995}
-  m_LocalRotation: {x: 0.5383994, y: 0.000000041011184, z: -0.000000026202285, w: 0.8426899}
+  m_LocalRotation: {x: 0.5383994, y: -0.000000041011187, z: 0.000000026202287, w: 0.8426899}
   m_LocalPosition: {x: -1.41, y: 11.42, z: -15.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12002,7 +12002,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462377777}
-  m_LocalRotation: {x: 0.5383994, y: 0.000000041011184, z: -0.000000026202285, w: 0.8426899}
+  m_LocalRotation: {x: 0.5383994, y: -0.000000041011187, z: 0.000000026202287, w: 0.8426899}
   m_LocalPosition: {x: -1.41, y: 11.42, z: -15.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -50457,6 +50457,7 @@ GameObject:
   - component: {fileID: 2006322311}
   - component: {fileID: 2006322310}
   - component: {fileID: 2006322314}
+  - component: {fileID: 2006322315}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -50471,13 +50472,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006322309}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 540c530f0f80d95488eafc1cf3d7a4d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  rotateSpeed: 0
+  rotateSpeed: 1
 --- !u!143 &2006322311
 CharacterController:
   m_ObjectHideFlags: 0
@@ -50538,6 +50539,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f140f5a9186cb2741bf9fabf60c4ea76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2006322315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006322309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948016f4c19bfed45b5b9ae217c40335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  rotateSpeed: 1
 --- !u!1 &2011243367
 GameObject:
   m_ObjectHideFlags: 0
