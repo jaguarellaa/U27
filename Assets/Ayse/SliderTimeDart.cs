@@ -34,7 +34,7 @@ public class SliderTimeDart: MonoBehaviour
 
     public void GameSliderDart()
     {
-        PlayerPrefs.GetFloat("lastTimeDart", gameTimeDart);
+        PlayerPrefs.GetFloat("lastTimeDart");
         if (bow.bowSettings.arrowCount > 0)
         {
 
@@ -50,7 +50,7 @@ public class SliderTimeDart: MonoBehaviour
             
             float lastTime = gameTimeDart;
             gameTimeDart = lastTime;
-            PlayerPrefs.SetFloat("lastTime", lastTime);
+            PlayerPrefs.SetFloat("lastTimeDart", lastTime);
             Debug.Log(lastTime);
 
         }

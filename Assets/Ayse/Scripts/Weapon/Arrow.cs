@@ -9,21 +9,29 @@ public class Arrow : MonoBehaviour
     bool disableRotation;
     public float destroyTime = 10f;
     AudioSource arrowAudio;
-    public int score=0;
+
+   
+   
 
     // Start is called before the first frame update
     void Start()
     {
+    
         rb = GetComponent<Rigidbody>();
         bx = GetComponent<BoxCollider>();
         arrowAudio = GetComponent<AudioSource>();
 
         Destroy(this.gameObject, destroyTime);
     }
+
     void Update()
     {
         if(!disableRotation)
             transform.rotation = Quaternion.LookRotation(rb.velocity);
+
+
+     
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -38,9 +46,10 @@ public class Arrow : MonoBehaviour
 
         if(collision.gameObject.tag=="Score")
         {
-            score += 1;
-            Destroy(this.gameObject);
-            Debug.Log(score);
+
+            ScoreDart.scoreValue ++;
+           
+          
         }
     }
 }

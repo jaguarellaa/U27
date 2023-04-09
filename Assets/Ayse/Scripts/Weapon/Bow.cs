@@ -41,7 +41,7 @@ public class Bow : MonoBehaviour
 
     Rigidbody currentArrow;
 
-    
+    public TargetSpawn targetSpawn;
 
     AudioSource bowAudio;
     
@@ -54,7 +54,10 @@ public class Bow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(bowSettings.arrowCount==0)
+        {
+            targetSpawn.arrowHitReset();
+        }
     }
 
     public void PickArrow()

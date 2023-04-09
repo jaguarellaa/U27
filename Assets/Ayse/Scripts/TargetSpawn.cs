@@ -14,7 +14,7 @@ public class TargetSpawn : MonoBehaviour
 
     bool GameIsOn = false;
     private bool repetitionChecker = true;
-
+   
 
   
 
@@ -32,17 +32,19 @@ public class TargetSpawn : MonoBehaviour
     public void arrowHitReset()
     {
         StopCoroutine(SpawnTargets());
-        StartCoroutine(SpawnTargets());
+     
     }
+    
 
     IEnumerator SpawnTargets()
     {
-        while (GameIsOn)
-        {
+        while (bow.bowSettings.arrowCount!=0)
+        {   
             int randomInt = 1;
             while (repetitionChecker)
             {
                 randomInt = Random.Range(0, 8);
+                
                 if (lastTargetID != randomInt)
                 {
                     repetitionChecker = false;
@@ -55,6 +57,7 @@ public class TargetSpawn : MonoBehaviour
             yield return new WaitForSeconds(timeIntervalForTargets);
 
             targets[randomInt].SetActive(false);
+
         }
     }
 
