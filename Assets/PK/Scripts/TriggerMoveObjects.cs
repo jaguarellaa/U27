@@ -16,7 +16,7 @@ namespace PK.GameJam
         {
             if (other.CompareTag(TagContainer.PushObjectTag))
             {
-                _renderer.material.color = Color.red;
+                _renderer.material.color = Color.green;
                 MoveObstackleOpenSignal.Trigger(obstackleIndex);
             }
         }
