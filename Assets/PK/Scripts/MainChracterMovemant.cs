@@ -1,14 +1,12 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.PlasticSCM.Editor.WebApi;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace PK.GameJam
 {
-    public class PK_BasicMove : MonoBehaviour
+    public class MainChracterMovemant : MonoBehaviour
     {
         [SerializeField] private float speed;
         [SerializeField] private float rotateSpeed;
@@ -30,17 +28,13 @@ namespace PK.GameJam
         {
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
-            Vector3 moveDrection = new Vector3(x, 0, z);
-            _characterController.Move(moveDrection * _speed * Time.deltaTime);
+            Vector3 moveDrection = transform.forward * z;
             if (_characterController.isGrounded && playerVelocity.y < 0)
             {
                 playerVelocity.y = 0f;
             }
-            if (moveDrection != Vector3.zero)
-            {
-                Quaternion lookat = Quaternion.LookRotation(moveDrection);
-                gameObject.transform.DORotateQuaternion(lookat, rotateSpeed); 
-            }
+            transform.Rotate(Vector3.up * x * Time.deltaTime * rotateSpeed);
+            _characterController.Move(moveDrection * _speed * Time.deltaTime);
             RaycastHit hit;
             if (!Physics.Raycast(transform.position, transform.forward, out hit, .9f))
             {
@@ -65,13 +59,11 @@ namespace PK.GameJam
             if (hit.rigidbody == null) return;
             if (hit.moveDirection.y < -.3f) return;
             float push = speed / hit.collider.attachedRigidbody.mass;
-            Debug.Log(push);
             hit.collider.attachedRigidbody.velocity = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z) * push;
             _speed = push;
 
-          
+
 
         }
-
     }
 }

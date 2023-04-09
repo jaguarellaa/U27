@@ -4,16 +4,19 @@ using System.Collections.Generic;
 using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 
-namespace PK
+namespace PK.GameJam
 {
     public class PushObjectSpawner : MonoBehaviour
     {
         [SerializeField] private Transform obstackleSpawnPoint;
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag(TagContainer.PushObjectTag))
+            if (other.CompareTag(TagContainer.PushObjectTag) || other.CompareTag(TagContainer.PlayerTag))
             {
+                Debug.Log(other.tag);
+                other.gameObject.SetActive(false);
                 other.transform.position = obstackleSpawnPoint.position;
+                other.gameObject.SetActive(true);
             }
         }
     }

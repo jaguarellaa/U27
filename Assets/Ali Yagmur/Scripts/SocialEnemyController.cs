@@ -183,7 +183,7 @@ public class SocialEnemyController : MonoBehaviour
 
     void LookAtPlayer()
     {
-        objectMesh.transform.LookAt(playerTransform);
+        transform.LookAt(playerTransform);
     }
 
 
