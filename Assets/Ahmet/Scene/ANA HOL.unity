@@ -5388,7 +5388,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ana Men\xFC"
+  m_text: "Main Men\xFC"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21051,8 +21051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messageBox: {fileID: 1267482527}
   infoTextBox: {fileID: 1484557506}
-  theMessage: "Buradan i\u015Fe gidip projelerimi bitirmem gerekiyor. Zaman\u0131m\u0131
-    iyi y\xF6netmeliyim."
+  theMessage: "Bo\u015F zaman\u0131m\u0131 de\u011Ferlendirmem laz\u0131m"
   duration: 5
 --- !u!65 &1802536883
 BoxCollider:
@@ -21125,7 +21124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802536881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 405.37, y: 3.44, z: 402.796}
+  m_LocalPosition: {x: 502.7, y: 3.44, z: 338.2}
   m_LocalScale: {x: 5, y: 5, z: 39.50186}
   m_ConstrainProportionsScale: 0
   m_Children: []
