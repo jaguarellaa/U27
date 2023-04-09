@@ -8,5 +8,6 @@ namespace PK.GameJam
     {
         public static string MoveObstackleTag = "MoveObstackle";
         public static string PushObjectTag = "PushObject";
+        public static string PlayerTag = "Player";
     }
 }

@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerControllerForSocialEnemies : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody rb;
     [SerializeField] GameObject characterModel;
+
+
+
 
     private void Update()
     {
@@ -64,5 +68,10 @@ public class PlayerControllerForSocialEnemies : MonoBehaviour
     public void GetDamage(int timeLost)
     {
         Debug.Log("You have lost " + timeLost + " seconds!");
+    }
+
+    public void GetAcademyPoints(int points)
+    {
+        Debug.Log("You have gained " + points + " points!");
     }
 }

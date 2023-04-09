@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: "Assets/Ahmet/Scene/MainMen\xFC.unity"
+    guid: 168a3ef3cf39f9b4984d573bf6310771
+  - enabled: 1
+    path: Assets/Ahmet/Scene/ANA HOL.unity
+    guid: 907484e63eff98946b62b6663061240d
+  - enabled: 1
+    path: Assets/Ahmet/Scene/Credits.unity
+    guid: 9ea0b11b4dce2b74da0a9b6aa8d07dd0
   m_configObjects: {}
