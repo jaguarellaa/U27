@@ -15,6 +15,7 @@ namespace PK.GameJam
         private CharacterController _characterController;
         private AnimController animController;
         private float _speed;
+        private Vector3 playerVelocity;
 
         private void Awake()
         {
@@ -30,6 +31,10 @@ namespace PK.GameJam
             float z = Input.GetAxis("Vertical");
             Vector3 moveDrection = new Vector3(x, 0, z);
             _characterController.Move(moveDrection * _speed * Time.deltaTime);
+            if (_characterController.isGrounded && playerVelocity.y < 0)
+            {
+                playerVelocity.y = 0f;
+            }
             if (moveDrection != Vector3.zero)
             {
                 gameObject.transform.forward = moveDrection;
@@ -49,7 +54,8 @@ namespace PK.GameJam
                 else if (moveDrection.magnitude < 0) animController.MoveBackAnim();
                 else animController.IdleAnim();
             }
-            
+            playerVelocity.y += -9.81f * Time.deltaTime;
+            _characterController.Move(playerVelocity * Time.deltaTime);
 
         }
         private void OnControllerColliderHit(ControllerColliderHit hit)

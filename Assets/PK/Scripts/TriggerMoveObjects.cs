@@ -8,7 +8,10 @@ namespace PK.GameJam
     {
         [SerializeField] private int obstackleIndex;
         private Renderer _renderer;
-
+        private void Awake()
+        {
+            _renderer = GetComponent<Renderer>();
+        }
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag(TagContainer.PushObjectTag))
