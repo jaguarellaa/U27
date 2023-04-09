@@ -65,6 +65,7 @@ namespace PK.GameJam
             if (hit.rigidbody == null) return;
             if (hit.moveDirection.y < -.3f) return;
             float push = speed / hit.collider.attachedRigidbody.mass;
+            Debug.Log(push);
             hit.collider.attachedRigidbody.velocity = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z) * push;
             _speed = push;
 
