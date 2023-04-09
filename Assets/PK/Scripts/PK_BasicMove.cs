@@ -39,7 +39,7 @@ namespace PK.GameJam
             if (moveDrection != Vector3.zero)
             {
                 Quaternion lookat = Quaternion.LookRotation(moveDrection);
-                gameObject.transform.rotation =Quaternion.Lerp(gameObject.transform.rotation, lookat,.1f);
+                gameObject.transform.DORotateQuaternion(lookat, rotateSpeed); //=Quaternion.Lerp(gameObject.transform.rotation, lookat,.1f);
             }
             RaycastHit hit;
             if (!Physics.Raycast(transform.position, transform.forward, out hit, .9f))
