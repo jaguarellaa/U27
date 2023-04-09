@@ -34,19 +34,19 @@ public class SceneManagerScript : MonoBehaviour
         AcademyScore += score;
     }
 
-    public void SetBowTime(float score)
+    public void SetBowTime(float input)
     {
-        BowTime -= score;
+        BowTime -= input;
     }
 
-    public void SetSocialTime(float score)
+    public void SetSocialTime(float input)
     {
-        SocialTime -= score;
+        SocialTime -= input;
     }
 
-    public void SetPuzzleTime(float score)
+    public void SetPuzzleTime(float input)
     {
-        PuzzleTime -= score;
+        PuzzleTime -= input;
     }
 }
 
