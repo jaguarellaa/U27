@@ -9,13 +9,31 @@ public class PlayerControllerForSocialEnemies : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody rb;
     [SerializeField] GameObject characterModel;
+    [SerializeField] SocialEnemySpawner enemySpawner;
+    [SerializeField] GameObject endObject;
+    [SerializeField] GameObject endText;
 
+    [SerializeField] float gameTime;
+    private float academyPoints = 0;
 
-
+    private bool keepCounting = true;
 
     private void Update()
     {
         Movement();
+        if(keepCounting == true)
+        {
+            gameTime -= Time.deltaTime;
+        }
+        
+        if (academyPoints > 20)
+        {
+            //end the game
+            enemySpawner.StopSpawningEnemies();
+            endObject.SetActive(true);
+            endText.SetActive(true);
+            keepCounting = false;
+        }
     }
 
     void FixedUpdate()
@@ -67,11 +85,13 @@ public class PlayerControllerForSocialEnemies : MonoBehaviour
 
     public void GetDamage(int timeLost)
     {
+        gameTime -= timeLost;
         Debug.Log("You have lost " + timeLost + " seconds!");
     }
 
     public void GetAcademyPoints(int points)
     {
+        academyPoints += points;
         Debug.Log("You have gained " + points + " points!");
     }
 }
