@@ -8,23 +8,41 @@ public class PressE : MonoBehaviour
 {
     [SerializeField] GameObject textPressE;
     private bool isTriggered = false;
+    [SerializeField] int loadSceneID;
+
+    GameObject sceneManager;
+
+
+    private void Start()
+    {
+        sceneManager = GameObject.FindWithTag("SceneManager");
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        isTriggered = true;
-        textPressE.SetActive(true);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            isTriggered = true;
+            textPressE.SetActive(true);
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        isTriggered = false;
-        textPressE.SetActive(true);
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            isTriggered = false;
+            textPressE.SetActive(false);
+        }
+        
     }
 
     private void Update()
     {
         if (isTriggered && Input.GetKeyDown(KeyCode.E))
         {
+            sceneManager.GetComponent<SceneManagerScript>().LoadSceneByID(loadSceneID);
             //make the action
         }
     }
