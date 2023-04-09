@@ -30,10 +30,6 @@ namespace PK.GameJam
 
         private void Update()
         {
-            if (_sceneManagerScript != null && gameStarted)
-            {
-                _sceneManagerScript.SetPuzzleTime(Time.deltaTime);
-            }
         }
         private void ToggleGameStarted(bool value)
         {

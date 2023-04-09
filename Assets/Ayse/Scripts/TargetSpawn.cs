@@ -1,9 +1,12 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TargetSpawn : MonoBehaviour
 {
+
+    public Bow bow;
     [SerializeField] private GameObject[] targets;
     [SerializeField] float timeIntervalForTargets;
 
@@ -11,6 +14,9 @@ public class TargetSpawn : MonoBehaviour
 
     bool GameIsOn = false;
     private bool repetitionChecker = true;
+
+
+  
 
     private void Start()
     {
@@ -52,5 +58,9 @@ public class TargetSpawn : MonoBehaviour
         }
     }
 
-    
+  
+
+
+
+
 }

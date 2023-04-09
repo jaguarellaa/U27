@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MoveObstackle
   - PushObject
+  - Score
   layers:
   - Default
   - TransparentFX

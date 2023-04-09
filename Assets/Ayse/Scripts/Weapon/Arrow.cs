@@ -9,6 +9,7 @@ public class Arrow : MonoBehaviour
     bool disableRotation;
     public float destroyTime = 10f;
     AudioSource arrowAudio;
+    public int score=0;
 
     // Start is called before the first frame update
     void Start()
@@ -34,5 +35,12 @@ public class Arrow : MonoBehaviour
             rb.isKinematic = true;
             bx.isTrigger = true;
         } 
+
+        if(collision.gameObject.tag=="Score")
+        {
+            score += 1;
+            Destroy(this.gameObject);
+            Debug.Log(score);
+        }
     }
 }
