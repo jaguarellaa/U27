@@ -35,6 +35,7 @@ namespace PK.GameJam
         {
             if (index == obstackleIndex)
             {
+                 totalTriggers--;
                 animObject.DOLocalMoveY(startPositionY, animTime).SetEase(ease);
             }
 
