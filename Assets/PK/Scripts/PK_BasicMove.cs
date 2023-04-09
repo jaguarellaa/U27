@@ -37,8 +37,13 @@ namespace PK.GameJam
                 if (z > 0) animController.MoveAnim();
                 else if (Mathf.Approximately(z, 0)) animController.IdleAnim();
                 else animController.MoveBackAnim();
-
             }
+            else
+            {
+                if (z > 0 || x > 0) animController.PushAnim();
+                else animController.IdleAnim();
+            }
+            
 
         }
         private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -48,8 +53,8 @@ namespace PK.GameJam
             float push = speed / hit.collider.attachedRigidbody.mass;
             hit.collider.attachedRigidbody.velocity = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z) * push;
             _speed = push;
-            if (Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Vertical") > 0) animController.PushAnim();
-            else animController.IdleAnim();
+
+          
 
         }
 
