@@ -58,6 +58,7 @@ MonoBehaviour:
   accSpeed: 18
   particleRed: {fileID: 3268123341545956915, guid: 30816539dc1d99e42a14226fab1248c3, type: 3}
   particleBlue: {fileID: 6523410356246583944, guid: b901cbcf51b7af04faec1c27d13fbb2c, type: 3}
+  floatingNumbers: {fileID: 8880905832635880504, guid: 348595dbb9461a742981de551484d29d, type: 3}
   textOnTop: {fileID: 5375927810356687709}
   type: 2
 --- !u!54 &-3367067583742299829
