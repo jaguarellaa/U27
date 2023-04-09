@@ -7,12 +7,18 @@ namespace PK.GameJam
 {
     public class LevelComplete : MonoBehaviour
     {
+        GameObject timeManager;
+
+        private void Start()
+        {
+            timeManager = GameObject.FindWithTag("TimeManager");
+        }
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag(TagContainer.PlayerTag))
             {
                 GameStartSignal.Trigger(false);
-                SceneManager.LoadScene("ANA HOL");
+                timeManager.GetComponent<AliTimeManager>().GameCopleted();
             }
         }
     }
