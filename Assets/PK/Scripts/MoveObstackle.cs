@@ -35,7 +35,8 @@ namespace PK.GameJam
         {
             if (index == obstackleIndex)
             {
-                 totalTriggers--;
+                totalTriggers--;
+                if(totalTriggers < triggerRequirements)
                 animObject.DOLocalMoveY(startPositionY, animTime).SetEase(ease);
             }
 
@@ -50,12 +51,6 @@ namespace PK.GameJam
         {
             MoveObstackleCloseSignal.closeAnim -= CloseAnim;
             MoveObstackleOpenSignal.openAnim -= OpenAnim;
-        }
-
-        [ContextMenu("Open")]
-        private void Open()
-        {
-            OpenAnim(0);
         }
     }
 }

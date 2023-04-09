@@ -24,6 +24,7 @@ public class SocialEnemyController : MonoBehaviour
 
     [SerializeField] GameObject particleRed;
     [SerializeField] GameObject particleBlue;
+    [SerializeField] GameObject floatingNumbers;
 
     [SerializeField] TextMeshPro textOnTop;
 
@@ -195,15 +196,18 @@ public class SocialEnemyController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (isPositive)
+            int resolution = Random.Range(minTimeCost, maxTimeCost);
+            if(isPositive)
             {
                 Instantiate(particleRed, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
-                collision.gameObject.GetComponent<PlayerControllerForSocialEnemies>().GetAcademyPoints(Random.Range(minTimeCost, maxTimeCost));
+                collision.gameObject.GetComponent<PlayerControllerForSocialEnemies>().GetAcademyPoints(resolution);
+                Instantiate(floatingNumbers, transform.position + new Vector3(0, resolution, 0), Quaternion.identity);
             }
             else
             {
                 Instantiate(particleRed, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
-                collision.gameObject.GetComponent<PlayerControllerForSocialEnemies>().GetDamage(Random.Range(minTimeCost, maxTimeCost));
+                collision.gameObject.GetComponent<PlayerControllerForSocialEnemies>().GetDamage(resolution);
+                Instantiate(floatingNumbers, transform.position + new Vector3(0, -1 * resolution, 0), Quaternion.identity);
             }
             Destroy(this.gameObject);
 

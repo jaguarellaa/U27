@@ -17,6 +17,7 @@ namespace PK.GameJam
         private AnimController animController;
         private float _speed;
         private Vector3 playerVelocity;
+        private bool canPush;
 
         private void Awake()
         {
@@ -44,6 +45,7 @@ namespace PK.GameJam
             RaycastHit hit;
             if (!Physics.Raycast(transform.position, transform.forward, out hit, .9f))
             {
+                canPush= false;
                 _speed = speed;
                 if (moveDrection.magnitude > 0) animController.MoveAnim();
                 else if (Mathf.Approximately(moveDrection.magnitude, 0)) animController.IdleAnim();
@@ -51,6 +53,7 @@ namespace PK.GameJam
             }
             else
             {
+                canPush = true;
                 if (moveDrection.magnitude > 0 && hit.collider.CompareTag(TagContainer.PushObjectTag)) animController.PushAnim();
                 else if (moveDrection.magnitude > 0) animController.MoveAnim();
                 else if (moveDrection.magnitude < 0) animController.MoveBackAnim();
@@ -62,10 +65,9 @@ namespace PK.GameJam
         }
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
-            if (hit.rigidbody == null) return;
+            if (hit.rigidbody == null || !canPush) return;
             if (hit.moveDirection.y < -.3f) return;
             float push = speed / hit.collider.attachedRigidbody.mass;
-            Debug.Log(push);
             hit.collider.attachedRigidbody.velocity = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z) * push;
             _speed = push;
 
