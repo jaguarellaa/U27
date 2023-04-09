@@ -113,7 +113,7 @@ public class SocialEnemySpawner : MonoBehaviour
             }
             else
             {
-                if (randomInt <= 25)
+                if (randomInt <= 30)
                 {
                     EnemyToBeSpawned = SocialEnemyV1Prefab;
                 }
