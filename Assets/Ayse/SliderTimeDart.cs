@@ -9,9 +9,9 @@ public class SliderTimeDart: MonoBehaviour
   
 
     public float maxTime;
-
+    
     float gameTimeDart;
-  
+    public float lastTime;
 
 
     public Bow bow;
@@ -48,10 +48,11 @@ public class SliderTimeDart: MonoBehaviour
       
         {
             
-            float lastTime = gameTimeDart;
+            lastTime = gameTimeDart;
             gameTimeDart = lastTime;
             PlayerPrefs.SetFloat("lastTimeDart", lastTime);
             Debug.Log(lastTime);
+
 
         }
     }

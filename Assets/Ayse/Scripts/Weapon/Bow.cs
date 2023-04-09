@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Bow : MonoBehaviour
 {
+    [SerializeField] ScoreDart scoreDartScript;
+
+    private GameObject sceneManager;
+    [SerializeField] GameObject endText;
+
     [System.Serializable]
     public class BowSettings
     {
@@ -49,6 +54,7 @@ public class Bow : MonoBehaviour
     void Start()
     {
         bowAudio = GetComponent<AudioSource>();
+        sceneManager = GameObject.FindGameObjectWithTag("SceneManager");
     }
 
     // Update is called once per frame
@@ -57,6 +63,20 @@ public class Bow : MonoBehaviour
         if(bowSettings.arrowCount==0)
         {
             targetSpawn.arrowHitReset();
+
+            Vector2 scoreAndTime = scoreDartScript.EndTheGame();
+            Debug.Log(scoreAndTime);
+            sceneManager.GetComponent<SceneManagerScript>().BowTime = scoreAndTime.y;
+            sceneManager.GetComponent<SceneManagerScript>().SetAcademyPoints(scoreAndTime.x);
+
+            endText.SetActive(true);
+            //Tell that it is over
+            //Total score
+            //Save scores
+            //Press e for return (loby)
+
+
+
         }
     }
 
