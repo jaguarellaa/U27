@@ -38,7 +38,8 @@ namespace PK.GameJam
             }
             if (moveDrection != Vector3.zero)
             {
-                gameObject.transform.forward = Vector3.Lerp(gameObject.transform.forward, moveDrection,.5f*Time.deltaTime*rotateSpeed);
+                Quaternion lookat = Quaternion.LookRotation(moveDrection);
+                gameObject.transform.rotation =Quaternion.Lerp(gameObject.transform.rotation, lookat,.1f);
             }
             RaycastHit hit;
             if (!Physics.Raycast(transform.position, transform.forward, out hit, .9f))

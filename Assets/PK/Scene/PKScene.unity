@@ -50477,7 +50477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  rotateSpeed: 360
+  rotateSpeed: 0
 --- !u!143 &2006322311
 CharacterController:
   m_ObjectHideFlags: 0
