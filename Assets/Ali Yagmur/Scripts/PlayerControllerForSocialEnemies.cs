@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class PlayerControllerForSocialEnemies : MonoBehaviour
@@ -12,13 +13,17 @@ public class PlayerControllerForSocialEnemies : MonoBehaviour
     [SerializeField] SocialEnemySpawner enemySpawner;
     [SerializeField] GameObject endObject;
     [SerializeField] GameObject endText;
-    [SerializeField] GameObject sceneManager;
+    GameObject sceneManager;
 
     [SerializeField] float gameTime;
     private float academyPoints = 0;
 
     private bool keepCounting = true;
     private bool gameIsOver = false;
+
+    public Image social;
+    public float maxTime;
+    public float lastTime;
 
     private void Start()
     {
@@ -31,7 +36,9 @@ public class PlayerControllerForSocialEnemies : MonoBehaviour
         if(keepCounting == true)
         {
             gameTime -= Time.deltaTime;
+            social.fillAmount = gameTime / maxTime;
         }
+        
         
         if (academyPoints > 20 && gameIsOver == false)
         {
