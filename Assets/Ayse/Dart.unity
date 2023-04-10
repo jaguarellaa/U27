@@ -4396,7 +4396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 076a0a1543eb3474fbabf51e95eb31fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sld: {fileID: 0}
+  sld: {fileID: 1506614186}
   totalScore: 0
   totalLastTime: 0
 --- !u!1 &1957320691

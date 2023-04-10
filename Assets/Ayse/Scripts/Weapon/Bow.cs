@@ -9,7 +9,7 @@ public class Bow : MonoBehaviour
     private GameObject sceneManager;
     [SerializeField] GameObject endTextBox;
 
-
+    bool gameIsOver = false;
     [System.Serializable]
     public class BowSettings
     {
@@ -63,12 +63,19 @@ public class Bow : MonoBehaviour
     {
         if(bowSettings.arrowCount==0)
         {
-            targetSpawn.arrowHitReset();
-            endTextBox.SetActive(true);
-            Vector2 scoreAndTime = scoreDartScript.EndTheGame();
-            Debug.Log("Burasi" +scoreAndTime);
-            sceneManager.GetComponent<SceneManagerScript>().BowTime = scoreAndTime.y;
-            sceneManager.GetComponent<SceneManagerScript>().SetAcademyPoints(scoreAndTime.x);
+            if (gameIsOver == false)
+            {
+                targetSpawn.arrowHitReset();
+                
+                Vector2 scoreAndTime = scoreDartScript.EndTheGame();
+                Debug.Log("Burasi" + scoreAndTime);
+                sceneManager.GetComponent<SceneManagerScript>().BowTime = scoreAndTime.y;
+                sceneManager.GetComponent<SceneManagerScript>().SetAcademyPoints(scoreAndTime.x);
+                endTextBox.SetActive(true);
+                gameIsOver = true;
+
+            }
+            
 
           
        
