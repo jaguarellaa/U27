@@ -12,7 +12,7 @@ using UnityEngine;
 
     void Start()
     {
-        float totalLastTime = PlayerPrefs.GetFloat("lastTime");
+        //float totalLastTime = PlayerPrefs.GetFloat("lastTime");
 
        
     }
@@ -30,12 +30,13 @@ using UnityEngine;
 
     public Vector2 EndTheGame()
     {
-        float totalLastTime = PlayerPrefs.GetFloat("lastTime");
+        totalLastTime = GameObject.FindAnyObjectByType<SliderTimeDart>().gameTimeDart;
+        //float totalLastTime = PlayerPrefs.GetFloat("lastTime");
         Debug.Log("Burasi" + totalLastTime);
         //Calculate score
         //Record score at SceneManager
         float calculatedScore = scoreValue / (100 - sld.lastTime) * 100;
-        return new Vector2(calculatedScore, sld.lastTime);
+        return new Vector2(calculatedScore, totalLastTime);
     }
 
 

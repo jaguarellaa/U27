@@ -18,7 +18,7 @@ public class SliderSetScript : MonoBehaviour
         sceneManager = GameObject.FindGameObjectWithTag("SceneManager");
 
         socialSlider.value = sceneManager.GetComponent<SceneManagerScript>().SocialTime / 100;
-        work.value = sceneManager.GetComponent<SceneManagerScript>().PuzzleTime / 200;
+        work.value = sceneManager.GetComponent<SceneManagerScript>().PuzzleTime / 100;
         school.value = sceneManager.GetComponent<SceneManagerScript>().BowTime / 100;
     }
 

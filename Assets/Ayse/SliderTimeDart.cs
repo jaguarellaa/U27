@@ -6,17 +6,21 @@ using UnityEngine.UI;
 public class SliderTimeDart: MonoBehaviour
    {
     public Image school;
-  
 
+    private SceneManagerScript manager;
+    private ScoreDart dart;
     public float maxTime;
     
-    float gameTimeDart;
+    public float gameTimeDart;
     public float lastTime;
 
 
     public Bow bow;
 
-
+    private void Awake()
+    {
+        dart = GameObject.FindAnyObjectByType<ScoreDart>();
+    }
     void Start()
     {
 
@@ -48,12 +52,11 @@ public class SliderTimeDart: MonoBehaviour
       
         {
             
-            lastTime = gameTimeDart;
-            gameTimeDart = lastTime;
-            PlayerPrefs.SetFloat("lastTimeDart", lastTime);
-            Debug.Log(lastTime);
-
-
+            //lastTime = gameTimeDart;
+            //gameTimeDart = lastTime;
+            PlayerPrefs.SetFloat("lastTimeDart", gameTimeDart);
+            Debug.Log(gameTimeDart);
+            dart.totalLastTime = gameTimeDart;
         }
     }
 

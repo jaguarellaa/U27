@@ -46,9 +46,8 @@ namespace PK
                 //calculate academy points
                 float totalPoints = (maxTime - gameTime)/200 ;
                 totalPoints *= 100;
-                Debug.Log(totalPoints);
                 sceneManager.GetComponent<SceneManagerScript>().SetAcademyPoints(totalPoints);
-                sceneManager.GetComponent<SceneManagerScript>().PuzzleTime = gameTime;
+                sceneManager.GetComponent<SceneManagerScript>().PuzzleTime = totalPoints;
                 //activate end text
                 endBox.SetActive(true);
                 gameIsOver = true;
