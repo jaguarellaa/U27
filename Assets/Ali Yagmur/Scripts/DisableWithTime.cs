@@ -85,7 +85,7 @@ namespace PK
 
         IEnumerator DisableIn()
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(10);
             panel.SetActive(false);
         }
     }
