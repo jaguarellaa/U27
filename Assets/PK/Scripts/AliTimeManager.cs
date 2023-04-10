@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace PK
 {
@@ -11,9 +12,12 @@ namespace PK
         [SerializeField] GameObject endText;
         [SerializeField] GameObject endBox;
 
-        [SerializeField] GameObject sceneManager;
+        GameObject sceneManager;
+
+        public Image workSlider;
 
         bool gameIsOver = false;
+
 
         float gameTime;
         bool keepCounting = true;
@@ -29,6 +33,7 @@ namespace PK
             if (keepCounting == true)
             {
                 gameTime -= Time.deltaTime;
+                workSlider.fillAmount = gameTime / maxTime;
             }
         }
 

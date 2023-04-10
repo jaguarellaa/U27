@@ -21,7 +21,7 @@ using UnityEngine;
     void Update()
     {
 
-        Debug.Log(scoreValue);
+        //Debug.Log(scoreValue);
         //PlayerPrefs.SetFloat("lastTime", totalLastTime);
         //totalScore = scoreValue / totalLastTime;
         //
