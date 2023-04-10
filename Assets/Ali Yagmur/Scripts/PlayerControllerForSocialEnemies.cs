@@ -12,11 +12,18 @@ public class PlayerControllerForSocialEnemies : MonoBehaviour
     [SerializeField] SocialEnemySpawner enemySpawner;
     [SerializeField] GameObject endObject;
     [SerializeField] GameObject endText;
+    [SerializeField] GameObject sceneManager;
 
     [SerializeField] float gameTime;
     private float academyPoints = 0;
 
     private bool keepCounting = true;
+    private bool gameIsOver = false;
+
+    private void Start()
+    {
+        sceneManager = GameObject.FindGameObjectWithTag("SceneManager");
+    }
 
     private void Update()
     {
@@ -26,13 +33,32 @@ public class PlayerControllerForSocialEnemies : MonoBehaviour
             gameTime -= Time.deltaTime;
         }
         
-        if (academyPoints > 20)
+        if (academyPoints > 20 && gameIsOver == false)
         {
             //end the game
             enemySpawner.StopSpawningEnemies();
             endObject.SetActive(true);
             endText.SetActive(true);
             keepCounting = false;
+            if (gameTime > 75)
+            {
+                academyPoints *= 4;
+            }
+            else if (gameTime > 50)
+            {
+                academyPoints *= 3;
+            }
+            else if (gameTime > 25)
+            {
+                academyPoints *= 2;
+            }
+            if (academyPoints > 100)
+            {
+                academyPoints = 100;
+            }
+            sceneManager.GetComponent<SceneManagerScript>().SetAcademyPoints(academyPoints);
+            sceneManager.GetComponent<SceneManagerScript>().SocialTime = gameTime;
+            gameIsOver = true;
         }
     }
 
@@ -51,7 +77,6 @@ public class PlayerControllerForSocialEnemies : MonoBehaviour
             rb.velocity = Vector3.zero;
         }
         
-        //rb.AddForce(moveDirection * speed, ForceMode.Impulse);
     }
 
     void Movement()
