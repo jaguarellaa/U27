@@ -13,6 +13,11 @@ public class AudioManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
+    private void Start()
+    {
+        PlayAudio(0);
+    }
+
     public void PlayAudio(int index)
     {
         if (index < 0 || index >= audioClips.Count)
