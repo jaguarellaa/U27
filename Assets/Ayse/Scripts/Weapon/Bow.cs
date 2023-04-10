@@ -64,13 +64,13 @@ public class Bow : MonoBehaviour
         if(bowSettings.arrowCount==0)
         {
             targetSpawn.arrowHitReset();
-
+            endTextBox.SetActive(true);
             Vector2 scoreAndTime = scoreDartScript.EndTheGame();
             Debug.Log("Burasi" +scoreAndTime);
             sceneManager.GetComponent<SceneManagerScript>().BowTime = scoreAndTime.y;
             sceneManager.GetComponent<SceneManagerScript>().SetAcademyPoints(scoreAndTime.x);
 
-            endTextBox.SetActive(true);
+          
        
             //Tell that it is over
             //Total score
