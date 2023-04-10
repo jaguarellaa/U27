@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f73c9b8b-12fc-46b8-a0ee-b5385cf8fd86" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.U27/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.U27/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Prefab/Text (TMP).controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Prefab/Text (TMP).controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Scene/Credits.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Scene/Credits.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Scene/creditsanim.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Scene/creditsanim.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/scripts/Anamenü.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/scripts/Anamenü.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ali Yagmur/Scripts/DisableWithTime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ali Yagmur/Scripts/DisableWithTime.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +88,7 @@
       <workItem from="1680995891793" duration="2021000" />
       <workItem from="1681004592495" duration="1349000" />
       <workItem from="1681079416344" duration="100000" />
-      <workItem from="1681102444220" duration="441000" />
+      <workItem from="1681102444220" duration="1041000" />
     </task>
     <servers />
   </component>
