@@ -11,7 +11,9 @@ public class SceneManagerScript : MonoBehaviour
     public float BowTime = 100f;
     public float AcademyScore = 0f;
 
+    public GameObject playTwice;
 
+    public bool[] sceneIDs = new bool[6];
 
     public float gameTime;
 
@@ -19,7 +21,10 @@ public class SceneManagerScript : MonoBehaviour
 
     void Awake()
     {
-
+        for (int i = 0; i < 6; i++)
+        {
+            sceneIDs[i] = false;
+        }
 
         SceneManagerScript[] objects = FindObjectsOfType<SceneManagerScript>();
 
@@ -29,8 +34,32 @@ public class SceneManagerScript : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+
+        
     }
 
+    public void ShowCantPlayTwice()
+    {
+        playTwice = GameObject.FindGameObjectWithTag("PlayTwice");
+        playTwice.transform.localScale = new Vector3(1,1,1);
+        StopCoroutine(disablePlayTwice());
+        StartCoroutine(disablePlayTwice());
+    }
+
+    IEnumerator disablePlayTwice()
+    {
+        yield return new WaitForSeconds(3);
+        playTwice.transform.localScale = new Vector3(0, 0, 0);
+    }
+
+    public void SetSceneIdTrue(int id)
+    {
+        if (id != 1)
+        {
+            sceneIDs[id] = true;
+        }
+        
+    }
 
     public void LoadSceneByID(int index)
     {

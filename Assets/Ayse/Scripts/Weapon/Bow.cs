@@ -7,7 +7,7 @@ public class Bow : MonoBehaviour
     [SerializeField] ScoreDart scoreDartScript;
 
     private GameObject sceneManager;
-    [SerializeField] GameObject endText;
+
 
     [System.Serializable]
     public class BowSettings
@@ -65,11 +65,11 @@ public class Bow : MonoBehaviour
             targetSpawn.arrowHitReset();
 
             Vector2 scoreAndTime = scoreDartScript.EndTheGame();
-            Debug.Log(scoreAndTime);
+            Debug.Log("Burasi" +scoreAndTime);
             sceneManager.GetComponent<SceneManagerScript>().BowTime = scoreAndTime.y;
             sceneManager.GetComponent<SceneManagerScript>().SetAcademyPoints(scoreAndTime.x);
 
-            endText.SetActive(true);
+            //endText.SetActive(true);
             //Tell that it is over
             //Total score
             //Save scores

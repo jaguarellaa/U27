@@ -9,6 +9,7 @@ TagManager:
   - Score
   - SceneManager
   - TimeManager
+  - PlayTwice
   layers:
   - Default
   - TransparentFX
