@@ -7,6 +7,7 @@ public class Bow : MonoBehaviour
     [SerializeField] ScoreDart scoreDartScript;
 
     private GameObject sceneManager;
+    [SerializeField] GameObject endTextBox;
 
 
     [System.Serializable]
@@ -69,7 +70,8 @@ public class Bow : MonoBehaviour
             sceneManager.GetComponent<SceneManagerScript>().BowTime = scoreAndTime.y;
             sceneManager.GetComponent<SceneManagerScript>().SetAcademyPoints(scoreAndTime.x);
 
-            //endText.SetActive(true);
+            endTextBox.SetActive(true);
+       
             //Tell that it is over
             //Total score
             //Save scores
