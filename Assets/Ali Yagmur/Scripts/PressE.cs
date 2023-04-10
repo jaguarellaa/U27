@@ -40,10 +40,24 @@ public class PressE : MonoBehaviour
 
     private void Update()
     {
-        if (isTriggered && Input.GetKeyDown(KeyCode.E))
+        if (isTriggered && Input.GetKeyDown(KeyCode.E) && sceneManager.GetComponent<SceneManagerScript>().sceneIDs[loadSceneID] == false)
         {
-            sceneManager.GetComponent<SceneManagerScript>().LoadSceneByID(loadSceneID);
+            if (loadSceneID != 1)
+            {
+                sceneManager.GetComponent<SceneManagerScript>().sceneIDs[loadSceneID] = true;
+            }
+            
+                sceneManager.GetComponent<SceneManagerScript>().LoadSceneByID(loadSceneID);
+            
+            
             //make the action
+        }
+        else if (isTriggered && Input.GetKeyDown(KeyCode.E))
+        {
+            if (loadSceneID != 1)
+            {
+                sceneManager.GetComponent<SceneManagerScript>().ShowCantPlayTwice();
+            }
         }
     }
 }
