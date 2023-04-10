@@ -53,7 +53,8 @@ public class LoadingScreenBarSystem : MonoBehaviour {
             yield return new WaitForSeconds(LoopTime);
             for (int j = 0; j < backgroundImages.Length; j++)
                 backgroundImages[j].SetActive(false);
-            backgroundImages[i].SetActive(true);           
+            backgroundImages[i].SetActive(true);
+            this.gameObject.SetActive(false);
         }
     }
 

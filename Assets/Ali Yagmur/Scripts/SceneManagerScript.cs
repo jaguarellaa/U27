@@ -7,11 +7,13 @@ using UnityEngine.UI;
 public class SceneManagerScript : MonoBehaviour
 {
     public float SocialTime = 100f;
-    public float PuzzleTime = 100f;
+    public float PuzzleTime = 200f;
     public float BowTime = 100f;
     public float AcademyScore = 0f;
 
     public GameObject playTwice;
+
+    bool[] completedList = new bool[3];
 
     public bool[] sceneIDs = new bool[6];
 
@@ -21,9 +23,15 @@ public class SceneManagerScript : MonoBehaviour
 
     void Awake()
     {
+        PuzzleTime = 200f;
         for (int i = 0; i < 6; i++)
         {
             sceneIDs[i] = false;
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            completedList[i] = false;
         }
 
         SceneManagerScript[] objects = FindObjectsOfType<SceneManagerScript>();
